@@ -1,1 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: #131313;
+  text-decoration: none;
+}
+
+header {
+  background-color: #FBFBFB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15vw;
+  height: 10vh;
+  -webkit-box-shadow: 0 0 15px 0 rgba(19, 19, 19, 0.15);
+          box-shadow: 0 0 15px 0 rgba(19, 19, 19, 0.15);
+}
+
+header .logo {
+  font-size: 1.3em;
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+header .logo small {
+  font-weight: 400;
+  font-size: 0.7em;
+}
+
+header ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+header ul li {
+  padding: 0 0 0 1.5em;
+}
+
+.icon-links img {
+  width: 1.5em;
+  padding: 0.15em;
+  border: 0.2em solid #131313;
+  border-radius: 100%;
+}
+
+.hero-page {
+  height: 80vh;
+  text-align: left;
+}
+
+.hero-page .hero {
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 42% auto;
+      grid-template-columns: 42% auto;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  padding: 2rem 0 1.5rem 0;
+  margin: 0 15vw;
+}
+
+.hero-page .hero .phrase {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding-top: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.hero-page .hero img {
+  height: 85%;
+  width: 100%;
+  border-radius: 1rem;
+  margin: auto 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 100%;
+     object-position: 0 100%;
+}
+
+.hero-page .secondary-nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  margin-left: 15vw;
+}
+
+.project_img {
+  border-radius: 1rem;
+}
+
+.icon-links__footer img {
+  width: 1.5em;
+}
 /*# sourceMappingURL=main.css.map */
