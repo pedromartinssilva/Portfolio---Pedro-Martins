@@ -19,6 +19,14 @@ a {
     text-decoration: none;
 }
 
+p {
+    line-height: 1.5rem;
+}
+
+.nav-container {
+    position: fixed;
+    width: 100vw;
+}
 
 header {
     background-color: #FBFBFB;
@@ -26,7 +34,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 15vw;
-    height: 10vh;
+    height: 15vh;
 
     box-shadow: 0 0 15px 0 rgba($color: #131313, $alpha: 0.15);
 
@@ -52,7 +60,7 @@ header {
     img {
         width: 1.5em;
         padding: 0.15em;
-        border: 0.2em solid #131313;
+        border: 0.2rem solid #131313;
         border-radius: 100%;
     }
 }
@@ -61,20 +69,26 @@ header {
 .hero-page {
     height: 80vh;
     text-align: left;
+    padding: 20vh 15vw 0 15vw;
+
     .hero {
         height: 80%;
-        display: grid;
-        grid-template-columns: 42% auto;
+        display: inline-grid;
+        grid-template-columns: 45% auto;
         grid-template-rows: 100%;
-        padding: 2rem 0 1.5rem 0;
-        margin: 0 15vw;
+        column-gap: 40px;
+        padding: 2rem 0 1rem 0;
 
         .phrase {
             text-align: left;
-            font-size: 1.2rem;
-            font-weight: 900;
+            font-size: 1rem;
+            font-weight: 900; 
             padding-top: 20%;
             height: fit-content;
+
+            .valor {
+                color: #1679EC;
+            }
         }
 
         img {
@@ -83,14 +97,14 @@ header {
             border-radius: 1rem;
             margin: auto 0;
             object-fit: cover;
-            object-position: 0 100%;
+            object-position: 100% 0;
         }
     }
 
     .secondary-nav {
-        display: inline-flex;
+        display: flex;
         column-gap: 8px;
-        margin-left: 15vw;
+
     }
 
     // .scroll {
@@ -99,12 +113,135 @@ header {
     // }
 }
 
-.project_img {
-    border-radius: 1rem;
+.about {
+    padding: 0 15vw 7rem 15vw;
+    text-align: center;
+    
+    h1 {
+        padding-bottom: 1rem;
+        font-size: xx-large;
+    }
+    
+    p{
+        padding: 0 10vw;
+    }
 }
 
-.icon-links__footer {
-    img {
-        width: 1.5em;
+.skills {
+    padding: 0 15vw 7rem 15vw;
+
+    h1 {
+        padding-bottom: 1.5rem;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        column-gap: 5%;
+        width: 80%;
+        margin: auto;
+
+        li {
+            box-sizing: border-box;
+            padding: 1.2rem;
+            background-color: #FBFBFB;
+            border-radius: 0.8rem;
+            box-shadow: 2px 2px 12px 0 rgba($color: #131313, $alpha: 0.15), inset 5px 5px 15px 0 rgba($color: white, $alpha: 1);
+        }
+    }
+
+    .skill-title {
+        font-size: large;
+    }
+
+    .skill-sub {
+        font-size: x-small;
+        font-weight: 700;
+        color: #3D96FF;
+    }
+
+    .skill-desc {
+        padding-top: 1rem;
+    }
+}
+
+footer {
+    background: rgb(22,121,236);
+    background: linear-gradient(50deg, rgba(22,121,236,1) 0%, rgba(15,148,242,1) 17%, rgba(0,193,255,1) 86%);
+    box-sizing: border-box;
+    padding: 6vh 15vw;
+    text-align: center;
+    color: #FBFBFB;
+
+    .quote {
+        padding: 5rem 0 6rem 0;
+    }
+
+    a {
+        color: #FBFBFB;
+    }
+}
+
+// .project_img {
+//     border-radius: 1rem;
+// }
+
+// .icon-links__footer {
+//     img {
+//         width: 1.5rem;
+//     }
+// }
+
+.cta, .projects {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .hero-page {
+        .hero{
+            height: 70%;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 2rem 0 1rem 0;
+            
+            .phrase {
+                padding-top: 0%;
+            }
+
+            img {
+                height: 40%;
+                width: 100%;
+                border-radius: 1rem;
+                margin: 0;
+                object-fit: cover;
+                object-position: 100% 0;
+            }
+        }
+    }
+    .about {
+        text-align: left;
+        p {
+         padding: 0;
+        }
+    }
+
+    .skills {
+        ul {
+            padding-left: 0;
+            padding-right: 0;
+            flex-direction: column;
+            margin: auto;
+            width: 90%;
+            li {
+               margin: 10px 0;
+               width: 100%;
+           }
+        }
+    }
+
+    .secondary-nav {
+        place-content: center;
     }
 }
