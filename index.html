@@ -10,7 +10,7 @@
     
     <div class="nav-container">
         <header>
-            <a href="#top" class="logo"><b>Pedro Martins</b></br><small>Desenvolvedor front-end</small></a>
+            <a href="#hero-page" class="logo"><b>Pedro Martins</b></br><small>Desenvolvedor</small></a>
             <nav class="icon-links">
                 <ul>
                     <li><a href="https://github.com/pedromartinssilva" target="_blank"><img src="images/icon-github.png" alt="github account" class="nav--icons"></a></li>
@@ -21,28 +21,28 @@
         </header>
     </div>
 
-    <div class="hero-page">
+    <div class="hero-page" id="hero-page">
         <div class="hero">
             <div class="phrase">
                 <h1>Valores sustentam o<br>talento e a dedicação.</h1>
-                <h1 class="valor">Quais são os seus?</h1>
+                <h1 class="valor" id="about">Quais são os seus?</h1>
             </div>
             <img src="images/blue-gradient.png" alt="main project" class="main-project">
         </div>
 
         <div class="secondary-nav">
-                <a href="#" class="secondary-nav__link"><b>Veja mais projetos</b></a>
+                <a href="#skills" class="secondary-nav__link"><b>Veja minhas skills</b></a>
 
                 <span>ou</span>
 
-                <a href="#" class="secondary-nav__link"><b>leia sobre mim</b></a>
+                <a href="#about" class="secondary-nav__link"><b>leia sobre mim</b></a>
         </div>
-        <!-- <span class="scroll">
+        <span class="scroll">
             <svg width="45" height="50" viewBox="0 0 45 50" fill="none">
                 <rect x="1.5" y="1.5" width="42" height="47" rx="21" stroke="#131313" stroke-width="3"/>
                 <path d="M21.9393 38.0607C22.5251 38.6464 23.4749 38.6464 24.0607 38.0607L33.6066 28.5147C34.1924 27.9289 34.1924 26.9792 33.6066 26.3934C33.0208 25.8076 32.0711 25.8076 31.4853 26.3934L23 34.8787L14.5147 26.3934C13.9289 25.8076 12.9792 25.8076 12.3934 26.3934C11.8076 26.9792 11.8076 27.9289 12.3934 28.5147L21.9393 38.0607ZM21.5 10V37H24.5V10H21.5Z" fill="black"/>
                 </svg>         
-        </span> -->
+        </span>
     </div>
 
     <section class="projects">
@@ -51,9 +51,7 @@
             
             <div class="project-first">
                 <a href="#" class="project-title"><b>Nome projeto</b></a>
-
                 <a href="#"><img class="repo" src="images/icon-github.png" alt="repositório github"></a>
-
                 <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore omnis exercitationem velit ut minima impedit porro nesciunt, laborum dolor! Quaerat.</p>
             </div>
         </div>
@@ -71,9 +69,12 @@
         <a href="#" class="secondary-nav__link"><b>Ver mais projetos</b></a>
     </section>
 
-    <section class="about">
+    <section class="about" id="skills">
         <h1>About me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consectetur molestiae illum debitis, fuga doloremque hic eaque ea expedita possimus autem quos? Odio, ea libero.</p>
+        <section class="about-flex">
+            <img class="profile" src="images/profile.png" alt="#">
+            <p>Oi! Me chamo Pedro Martins, sou estudante de Ciência da Computação no Centro de Informática (CIn) da Universidade Federal de Pernambuco (UFPE), no campus Recife, cidade onde nasci e moro até hoje.</p>
+        </section>
     </section>
 
     <section class="skills">
@@ -82,16 +83,16 @@
             <ul>
                 <li>
                     <p class="skill-title"><b>Python</b></p>
-                    <p class="skill-desc">Lorem  In laboriosam aut saepe quisquam eaque fuga at perspiciatis consectetur laborum dolorem?</p>
+                    <p class="skill-desc">É uma linguagem de programação de alto nível. Uma forma de organizar softwares que possibilita maior controle e estabilidade de códigos para projetos de grande porte.</p>
                 </li>
                 <li>
                     <p class="skill-title"><b>JavaScript</b></p>
-                    <p class="skill-desc">Lorem  In laboriosam aut saepe quisquam eaque fuga at perspiciatis consectetur laborum dolorem?</p>
+                    <p class="skill-desc">Torna possível a implementação de itens complexos em páginas web que vão além dos estáticos, ou seja, conteúdo que se atualiza de acordo com a interação do usuário.</p>
                 </li>
                 <li>
                     <span class="skill-title"><b>Web Dev</b></span>
                     <span class="skill-sub">HTML & CSS</span>
-                    <p class="skill-desc">Lorem  In laboriosam aut saepe quisquam eaque fuga at laboriosam aut saepe quisquam perspiciatis consectetur laborum dolorem?</p>
+                    <p class="skill-desc">HTML é linguagem de marcação utilizada para estruturar os elementos da página, enquanto o CSS é uma linguagem de estilos utilizada para definir valores estéticos para os elementos da página.</p>
                 </li>
             </ul>
         </div>
@@ -108,14 +109,14 @@
     
     <footer>
         <div class="wave">
-            <h1 class="quote">Mensagem impactante e impressionante</h1>
-            <!-- <div class="icon-links__footer">
+            <h1 class="quote">Se o amor for o centro do seu sonho, ele se realizará.</h1>
+            <div class="icon-links__footer">
                 <ul>
                     <li><a href="#"><img src="images/icon-github-white.png" alt="github account" class="bottom-icons"></a></li>
                     <li><a href="#"><img src="images/icon-linkedin-white.png" alt="linkedin account" class="footer--icons"></a></li>
                     <li><a href="#"><img src="images/icon-email-white.png" alt="email address" class="footer--icons"></a></li>
                 </ul>
-            </div> -->
+            </div>
             <p class="credits">Desenvolvido por <a href="https://github.com/pedromartinssilva" target="_blank"><b>Pedro Martins</b></a></p>
         </div>
     </footer>

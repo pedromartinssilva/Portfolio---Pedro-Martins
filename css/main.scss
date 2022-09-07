@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    color: #131313;
 }
 
 ul {
@@ -35,9 +36,9 @@ header {
     align-items: center;
     padding: 0 15vw;
     height: 15vh;
-
+    
     box-shadow: 0 0 15px 0 rgba($color: #131313, $alpha: 0.15);
-
+    
     .logo {
         font-size: 1.3em;
         font-weight: 900;
@@ -47,11 +48,11 @@ header {
             font-size: 0.7em;
         }
     }
-
+    
     ul {
         display: inline-flex;
         li {
-            padding: 0 0 0 1.5em;
+            padding-left: 2vw;
         }
     }
 }
@@ -60,32 +61,38 @@ header {
     img {
         width: 1.5em;
         padding: 0.15em;
-        border: 0.2rem solid #131313;
+        border: 0.2rem solid #ffffff;
         border-radius: 100%;
+        transition: border-color 0.5s ease-out 50ms;
+    }
+    img:hover {
+        border-color: #131313;
     }
 }
 
 
 .hero-page {
     height: 80vh;
+    width: 71%;
     text-align: left;
     padding: 20vh 15vw 0 15vw;
-
+    
     .hero {
         height: 80%;
+        width: 100%;
         display: inline-grid;
         grid-template-columns: 45% auto;
         grid-template-rows: 100%;
         column-gap: 40px;
         padding: 2rem 0 1rem 0;
-
+        
         .phrase {
             text-align: left;
-            font-size: 1rem;
+            font-size: 1em;
             font-weight: 900; 
             padding-top: 20%;
             height: fit-content;
-
+            
             .valor {
                 color: #1679EC;
             }
@@ -99,31 +106,55 @@ header {
             object-fit: cover;
             object-position: 100% 0;
         }
+        
     }
-
+    
     .secondary-nav {
         display: flex;
         column-gap: 8px;
-
+        a:hover {
+            color: #1679EC;
+        }
     }
-
-    // .scroll {
-    //     position: absolute;
-    //     left: 50%;
-    // }
 }
 
 .about {
     padding: 0 15vw 7rem 15vw;
     text-align: center;
     
+    .about-flex {
+        display: inline-flex;
+        padding: 1.5rem 11vw 0 11vw;
+    }
+
     h1 {
-        padding-bottom: 1rem;
+        padding-right: 1.5rem;
+        margin: auto;
         font-size: xx-large;
     }
     
-    p{
-        padding: 0 10vw;
+    p {
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    .profile {
+        height: 60px;
+        width: 60px;
+        margin: auto;
+        flex-shrink: 0;
+        border-radius: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+        padding: 0.15em;
+        border: 0.2rem solid #ffffff;
+        transition: border-color 0.5s ease-out 50ms;
+    }
+
+    .profile:hover {
+        padding: 0.15em;
+        border: 0.2rem solid #3D96FF;
+        border-radius: 100%;
     }
 }
 
@@ -148,6 +179,15 @@ header {
             background-color: #FBFBFB;
             border-radius: 0.8rem;
             box-shadow: 2px 2px 12px 0 rgba($color: #131313, $alpha: 0.15), inset 5px 5px 15px 0 rgba($color: white, $alpha: 1);
+        }
+        li:hover {
+            color: #FBFBFB;
+            background: rgb(22,121,236);
+            background: linear-gradient(30deg, rgba(22,121,236,1) 0%, rgba(15,148,242,1) 17%, rgba(0,193,255,1) 86%);
+            box-shadow: 2px 2px 12px 0 rgba($color: #131313, $alpha: 0), inset 3px 3px 20px 0 rgba($color: rgb(22,121,236), $alpha: 0.5);
+            .skill-sub {
+                color: #FBFBFB;
+            }
         }
     }
 
@@ -183,17 +223,8 @@ footer {
     }
 }
 
-// .project_img {
-//     border-radius: 1rem;
-// }
-
-// .icon-links__footer {
-//     img {
-//         width: 1.5rem;
-//     }
-// }
-
-.cta, .projects {
+.cta, .projects, .icon-links__footer, .scroll {
+    // hiding some features not relevant to this project
     display: none;
 }
 
@@ -221,9 +252,8 @@ footer {
         }
     }
     .about {
-        text-align: left;
-        p {
-         padding: 0;
+        .about-flex {
+            padding: 1.5rem 0 0 0;
         }
     }
 
@@ -233,7 +263,7 @@ footer {
             padding-right: 0;
             flex-direction: column;
             margin: auto;
-            width: 90%;
+            width: 100%;
             li {
                margin: 10px 0;
                width: 100%;

@@ -5,6 +5,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+  color: #131313;
 }
 
 ul {
@@ -48,23 +49,29 @@ header ul {
   display: inline-flex;
 }
 header ul li {
-  padding: 0 0 0 1.5em;
+  padding-left: 2vw;
 }
 
 .icon-links img {
   width: 1.5em;
   padding: 0.15em;
-  border: 0.2rem solid #131313;
+  border: 0.2rem solid #ffffff;
   border-radius: 100%;
+  transition: border-color 0.5s ease-out 50ms;
+}
+.icon-links img:hover {
+  border-color: #131313;
 }
 
 .hero-page {
   height: 80vh;
+  width: 71%;
   text-align: left;
   padding: 20vh 15vw 0 15vw;
 }
 .hero-page .hero {
   height: 80%;
+  width: 100%;
   display: inline-grid;
   grid-template-columns: 45% auto;
   grid-template-rows: 100%;
@@ -74,7 +81,7 @@ header ul li {
 }
 .hero-page .hero .phrase {
   text-align: left;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 900;
   padding-top: 20%;
   height: -webkit-fit-content;
@@ -99,17 +106,45 @@ header ul li {
   -moz-column-gap: 8px;
        column-gap: 8px;
 }
+.hero-page .secondary-nav a:hover {
+  color: #1679EC;
+}
 
 .about {
   padding: 0 15vw 7rem 15vw;
   text-align: center;
 }
+.about .about-flex {
+  display: inline-flex;
+  padding: 1.5rem 11vw 0 11vw;
+}
 .about h1 {
-  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  margin: auto;
   font-size: xx-large;
 }
 .about p {
-  padding: 0 10vw;
+  text-align: left;
+  padding-left: 2rem;
+}
+.about .profile {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  flex-shrink: 0;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
+  padding: 0.15em;
+  border: 0.2rem solid #ffffff;
+  transition: border-color 0.5s ease-out 50ms;
+}
+.about .profile:hover {
+  padding: 0.15em;
+  border: 0.2rem solid #3D96FF;
+  border-radius: 100%;
 }
 
 .skills {
@@ -133,6 +168,15 @@ header ul li {
   background-color: #FBFBFB;
   border-radius: 0.8rem;
   box-shadow: 2px 2px 12px 0 rgba(19, 19, 19, 0.15), inset 5px 5px 15px 0 white;
+}
+.skills ul li:hover {
+  color: #FBFBFB;
+  background: rgb(22, 121, 236);
+  background: linear-gradient(30deg, rgb(22, 121, 236) 0%, rgb(15, 148, 242) 17%, rgb(0, 193, 255) 86%);
+  box-shadow: 2px 2px 12px 0 rgba(19, 19, 19, 0), inset 3px 3px 20px 0 rgba(22, 121, 236, 0.5);
+}
+.skills ul li:hover .skill-sub {
+  color: #FBFBFB;
 }
 .skills .skill-title {
   font-size: large;
@@ -161,7 +205,7 @@ footer a {
   color: #FBFBFB;
 }
 
-.cta, .projects {
+.cta, .projects, .icon-links__footer, .scroll {
   display: none;
 }
 
@@ -186,18 +230,15 @@ footer a {
     -o-object-position: 100% 0;
        object-position: 100% 0;
   }
-  .about {
-    text-align: left;
-  }
-  .about p {
-    padding: 0;
+  .about .about-flex {
+    padding: 1.5rem 0 0 0;
   }
   .skills ul {
     padding-left: 0;
     padding-right: 0;
     flex-direction: column;
     margin: auto;
-    width: 90%;
+    width: 100%;
   }
   .skills ul li {
     margin: 10px 0;
