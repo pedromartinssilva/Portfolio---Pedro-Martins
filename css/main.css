@@ -6,6 +6,9 @@
 body {
   font-family: "Inter", sans-serif;
   color: #131313;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 ul {
@@ -53,7 +56,7 @@ header ul li {
 }
 
 .icon-links img {
-  width: 1.5em;
+  width: 1.7em;
   padding: 0.15em;
   border: 0.2rem solid #ffffff;
   border-radius: 100%;
@@ -116,16 +119,16 @@ header ul li {
 }
 .about .about-flex {
   display: inline-flex;
-  padding: 1.5rem 11vw 0 11vw;
+  padding: 1.5rem 10vw 0 10vw;
 }
 .about h1 {
-  padding-right: 1.5rem;
   margin: auto;
   font-size: xx-large;
 }
 .about p {
   text-align: left;
   padding-left: 2rem;
+  padding-right: 3rem;
 }
 .about .profile {
   height: 60px;
@@ -148,7 +151,7 @@ header ul li {
 }
 
 .skills {
-  padding: 0 15vw 7rem 15vw;
+  padding: 0 12vw 7rem 12vw;
 }
 .skills h1 {
   padding-bottom: 1.5rem;
@@ -197,16 +200,13 @@ footer {
   padding: 6vh 15vw;
   text-align: center;
   color: #FBFBFB;
+  width: 100vw;
 }
 footer .quote {
   padding: 5rem 0 6rem 0;
 }
 footer a {
   color: #FBFBFB;
-}
-
-.cta, .projects, .icon-links__footer, .scroll {
-  display: none;
 }
 
 @media screen and (max-width: 1050px) {
@@ -231,7 +231,11 @@ footer a {
        object-position: 100% 0;
   }
   .about .about-flex {
-    padding: 1.5rem 0 0 0;
+    padding: 0.5rem 0 0 0;
+    flex-direction: column;
+  }
+  .about p {
+    padding: 1.5rem 0 1rem 0;
   }
   .skills ul {
     padding-left: 0;
@@ -246,5 +250,7 @@ footer a {
   }
   .secondary-nav {
     place-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=main.css.map */

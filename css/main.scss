@@ -8,6 +8,9 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #131313;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 ul {
@@ -38,7 +41,7 @@ header {
     height: 15vh;
     
     box-shadow: 0 0 15px 0 rgba($color: #131313, $alpha: 0.15);
-    
+
     .logo {
         font-size: 1.3em;
         font-weight: 900;
@@ -48,7 +51,7 @@ header {
             font-size: 0.7em;
         }
     }
-    
+
     ul {
         display: inline-flex;
         li {
@@ -59,7 +62,7 @@ header {
 
 .icon-links {
     img {
-        width: 1.5em;
+        width: 1.7em;
         padding: 0.15em;
         border: 0.2rem solid #ffffff;
         border-radius: 100%;
@@ -69,7 +72,6 @@ header {
         border-color: #131313;
     }
 }
-
 
 .hero-page {
     height: 80vh;
@@ -85,7 +87,7 @@ header {
         grid-template-rows: 100%;
         column-gap: 40px;
         padding: 2rem 0 1rem 0;
-        
+
         .phrase {
             text-align: left;
             font-size: 1em;
@@ -124,11 +126,10 @@ header {
     
     .about-flex {
         display: inline-flex;
-        padding: 1.5rem 11vw 0 11vw;
+        padding: 1.5rem 10vw 0 10vw;
     }
 
     h1 {
-        padding-right: 1.5rem;
         margin: auto;
         font-size: xx-large;
     }
@@ -136,6 +137,7 @@ header {
     p {
         text-align: left;
         padding-left: 2rem;
+        padding-right: 3rem;
     }
 
     .profile {
@@ -159,7 +161,7 @@ header {
 }
 
 .skills {
-    padding: 0 15vw 7rem 15vw;
+    padding: 0 12vw 7rem 12vw;
 
     h1 {
         padding-bottom: 1.5rem;
@@ -180,6 +182,7 @@ header {
             border-radius: 0.8rem;
             box-shadow: 2px 2px 12px 0 rgba($color: #131313, $alpha: 0.15), inset 5px 5px 15px 0 rgba($color: white, $alpha: 1);
         }
+
         li:hover {
             color: #FBFBFB;
             background: rgb(22,121,236);
@@ -213,6 +216,7 @@ footer {
     padding: 6vh 15vw;
     text-align: center;
     color: #FBFBFB;
+    width: 100vw;
 
     .quote {
         padding: 5rem 0 6rem 0;
@@ -223,10 +227,6 @@ footer {
     }
 }
 
-.cta, .projects, .icon-links__footer, .scroll {
-    // hiding some features not relevant to this project
-    display: none;
-}
 
 @media screen and (max-width: 1050px) {
     .hero-page {
@@ -251,12 +251,17 @@ footer {
             }
         }
     }
+
     .about {
         .about-flex {
-            padding: 1.5rem 0 0 0;
+            padding: 0.5rem 0 0 0;
+            flex-direction: column;
+        }
+        
+        p {
+        padding: 1.5rem 0 1rem 0;
         }
     }
-
     .skills {
         ul {
             padding-left: 0;
@@ -273,5 +278,7 @@ footer {
 
     .secondary-nav {
         place-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
